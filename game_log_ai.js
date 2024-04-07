@@ -47,8 +47,8 @@ const AIStrategy = {
         console.log('Executing Competitive AI Strategy for Player1');
       // Moves directly towards the stag, trying to catch it before Player2
       const angleToStag = Math.atan2(stag.y - hunter1.y, stag.x - hunter1.x);
-      hunter1.x += Math.cos(angleToStag) * 10;
-      hunter1.y += Math.sin(angleToStag) * 10;
+      hunter1.x += Math.cos(angleToStag) * 2;
+      hunter1.y += Math.sin(angleToStag) * 2;
       hunter1.x = Math.max(25, Math.min(hunter1.x, canvas.width - 25));
       hunter1.y = Math.max(25, Math.min(hunter1.y, canvas.height - 25));
     },
