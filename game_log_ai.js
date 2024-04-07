@@ -37,8 +37,8 @@ const AIStrategy = {
         console.log('Executing Cooperative AI Strategy for Player1');
       // Moves towards Player 2 to assist in catching the stag
       const angleToPlayer2 = Math.atan2(hunter2.y - hunter1.y, hunter2.x - hunter1.x);
-      hunter1.x += Math.cos(angleToPlayer2) * 10 + Math.random() > 0.5 ? 10 : -10; // Add some randomness
-      hunter1.y += Math.sin(angleToPlayer2) * 10 + Math.random() > 0.5 ? 10 : -10; // Add some randomness
+      hunter1.x += Math.cos(angleToPlayer2) * 10 + Math.random() > 0.5 ? 30 : -30; // Add some randomness
+      hunter1.y += Math.sin(angleToPlayer2) * 10 + Math.random() > 0.5 ? 30 : -30; // Add some randomness
       hunter1.x = Math.max(25, Math.min(hunter1.x, canvas.width - 25));
       hunter1.y = Math.max(25, Math.min(hunter1.y, canvas.height - 25));
     },
@@ -158,6 +158,7 @@ document.getElementById('aiModeSelector').addEventListener('change', function(e)
 
   // Player controls
   document.addEventListener('keydown', (event) => {
+    document.getElementById('yourCanvasId').focus();
     let moveAmount = 20; // Adjust as necessary for game balance
     switch (event.key) {
         case 'a': if (hunter1.x - moveAmount > 25) hunter1.x -= moveAmount; break; // Left
