@@ -67,6 +67,7 @@ const AIStrategy = {
 document.getElementById('aiModeSelector').addEventListener('change', function(e) {
     AIStrategy.currentMode = e.target.value;
     console.log(`AI Mode changed to: ${e.target.value}`);
+    document.getElementById('gameCanvas').focus();
   });
 
   let stag = { x: Math.random() * canvas.width, y: Math.random() * canvas.height };
