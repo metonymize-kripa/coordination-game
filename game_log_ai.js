@@ -158,7 +158,6 @@ document.getElementById('aiModeSelector').addEventListener('change', function(e)
 
   // Player controls
   document.addEventListener('keydown', (event) => {
-    document.getElementById('yourCanvasId').focus();
     let moveAmount = 20; // Adjust as necessary for game balance
     switch (event.key) {
         case 'a': if (hunter1.x - moveAmount > 25) hunter1.x -= moveAmount; break; // Left
