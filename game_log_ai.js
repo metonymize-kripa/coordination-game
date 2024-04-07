@@ -94,6 +94,8 @@ document.getElementById('aiModeSelector').addEventListener('change', function(e)
     let angle = Math.atan2(stag.y - closest.y, stag.x - closest.x);
     stag.x += Math.cos(angle) * 4; // Twice the speed of hunters
     stag.y += Math.sin(angle) * 4;
+    stag.x += Math.random() > 0.5 ? 1 : -1;
+    stag.y += Math.random() > 0.5 ? 1 : -1;
 
     // Keep within bounds
     stag.x = Math.max(25, Math.min(stag.x, canvas.width - 25));
